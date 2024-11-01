@@ -1,0 +1,12 @@
+rating:
+  service:
+    endpoint: http://localhost:7070/ratings/
+
+resilience4j.timelimiter:
+  instances:
+    ratingService:
+      timeoutDuration: 3s
+      cancelRunningFuture: true
+    someOtherService:
+      timeoutDuration: 1s
+      cancelRunningFuture: false
